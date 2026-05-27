@@ -54,32 +54,56 @@ export async function POST(request: Request) {
 
     let imageUrl: string | null = null;
     if (image && image.size > 0) {
-      console.log('Uploading image...');
       try {
         const bytes = await image.arrayBuffer();
         const buffer = Buffer.from(bytes);
 
-        // Upload to Cloudinary using a promise wrapper
-        const uploadResult = await new Promise<any>((resolve, reject) => {
-          const uploadStream = cloudinary.uploader.upload_stream(
-            { folder: 'blog-posts' },
-            (error, result) => {
-              if (error) {
-                console.error('Cloudinary upload error:', error);
-                reject(error);
-              } else resolve(result);
-            }
-          );
-          uploadStream.end(buffer);
-        });
+        const isCloudinaryConfigured = 
+          process.env.CLOUDINARY_CLOUD_NAME && 
+          process.env.CLOUDINARY_API_KEY && 
+          process.env.CLOUDINARY_API_SECRET;
 
-        imageUrl = uploadResult.secure_url;
-        console.log('Image uploaded:', imageUrl);
+        if (isCloudinaryConfigured) {
+          console.log('Uploading image to Cloudinary...');
+          // Upload to Cloudinary using a promise wrapper
+          const uploadResult = await new Promise<any>((resolve, reject) => {
+            const uploadStream = cloudinary.uploader.upload_stream(
+              { folder: 'blog-posts' },
+              (error, result) => {
+                if (error) {
+                  console.error('Cloudinary upload error:', error);
+                  reject(error);
+                } else resolve(result);
+              }
+            );
+            uploadStream.end(buffer);
+          });
+
+          imageUrl = uploadResult.secure_url;
+          console.log('Image uploaded to Cloudinary:', imageUrl);
+        } else {
+          console.log('Cloudinary credentials not detected. Saving image locally...');
+          // Fallback to local storage in public/uploads
+          const fs = await import('fs/promises');
+          const path = await import('path');
+          const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+          
+          // Ensure directory exists
+          await fs.mkdir(uploadsDir, { recursive: true });
+          
+          // Generate a unique filename
+          const fileExtension = image.name.split('.').pop() || 'png';
+          const filename = `${Date.now()}-${Math.random().toString(36).substring(2, 9)}.${fileExtension}`;
+          const filePath = path.join(uploadsDir, filename);
+          
+          // Write file
+          await fs.writeFile(filePath, buffer);
+          imageUrl = `/uploads/${filename}`;
+          console.log('Saved image locally to:', imageUrl);
+        }
       } catch (uploadError) {
-        console.error('Failed to upload image:', uploadError);
-        // Continue without image or fail? Let's fail for now to be explicit, or maybe continue?
-        // User expects image if they uploaded one.
-        return NextResponse.json({ error: 'Failed to upload image', details: uploadError }, { status: 500 });
+        console.error('Failed to process image upload:', uploadError);
+        return NextResponse.json({ error: 'Failed to process image upload', details: uploadError }, { status: 500 });
       }
     }
 
@@ -90,7 +114,7 @@ export async function POST(request: Request) {
         excerpt: excerpt || '',
         content: content || '',
         category,
-        ...(imageUrl ? { image: imageUrl } : {}),
+        image: imageUrl || 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop',
         readTime,
         published,
       },

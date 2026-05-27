@@ -2,6 +2,8 @@ import SplitHero from "@/components/SplitHero";
 import BioExcerpt from "@/components/BioExcerpt";
 import Footer from "@/components/Footer";
 import Blog from "@/components/Blog";
+import WhoAmI from "@/components/WhoAmI";
+import Contact from "@/components/Contact";
 import { prisma } from "@/lib/prisma";
 
 export const dynamic = 'force-dynamic';
@@ -17,7 +19,7 @@ export default async function Home() {
     take: 6,
   });
 
-  // Map Prisma Post to BlogPost
+  
   const blogPosts = posts.map((post) => ({
     ...post,
     category: post.category || "Uncategorized",
@@ -29,12 +31,13 @@ export default async function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen flex-col bg-[var(--color-mba-background)]">
+      <main className="flex min-h-screen flex-col">
         <SplitHero />
         <section id="about">
-          <BioExcerpt />
+          <WhoAmI />
         </section>
         <Blog posts={blogPosts} />
+        <Contact />
       </main>
       <Footer />
     </>

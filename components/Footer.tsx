@@ -5,44 +5,72 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-[var(--color-mba-navy)] border-t border-[var(--color-mba-border)]/10 text-white">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-                    {/* Column 1: Quick Links */}
-                    <div className="space-y-6">
-                        <h3 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-6 font-[family-name:var(--font-oswald)]">Navigation</h3>
+        <footer className="relative bg-[var(--color-surface)] border-t border-[var(--color-border)] text-[var(--color-text-primary)] overflow-hidden">
+            {/* Ambient luxury glow overlay */}
+            <div className="absolute bottom-0 right-[-10%] w-[35%] h-[70%] bg-[var(--color-primary)]/[0.02] blur-[120px] rounded-full pointer-events-none -z-10" />
+            <div className="absolute top-0 left-[-10%] w-[35%] h-[70%] bg-[var(--color-primary)]/[0.02] blur-[120px] rounded-full pointer-events-none -z-10" />
+
+            <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-24 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16">
+                    
+                    {/* Column 1: Editorial Branding & Bio */}
+                    <div className="lg:col-span-5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <span className="text-2xl font-serif italic tracking-wide text-[var(--color-text-primary)]" style={{ fontFamily: "var(--font-cormorant)" }}>
+                                Jeffrey Drai <span className="not-italic text-xl text-[var(--color-primary)]">ッ</span>
+                            </span>
+                        </div>
+                        <p className="text-[14px] text-[var(--color-text-secondary)] leading-[1.8] font-serif italic font-light max-w-md" style={{ fontFamily: "var(--font-cormorant)" }}>
+                            Ghanaian bioengineering researcher and scholar based at York University. Dedicated to bridging the gap between biological complexity, technological precision, and advanced computational engineering.
+                        </p>
+                        <div className="pt-2">
+                            <Link
+                                href="/about"
+                                className="inline-flex items-center text-[10px] font-bold tracking-[0.25em] text-[var(--color-primary)] hover:text-[var(--color-primary-light)] transition-colors duration-300 uppercase group"
+                            >
+                                Read Full Biography
+                                <span className="ml-2 group-hover:translate-x-1.5 transition-transform duration-300">→</span>
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Column 2: Navigation Links */}
+                    <div className="lg:col-span-3 lg:col-start-7 space-y-6">
+                        <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] font-display">
+                            Navigation
+                        </h3>
                         <ul className="space-y-4">
-                            <li>
-                                <Link href="/" className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-3 group text-sm md:text-base">
-                                    <span className="w-0 group-hover:w-3 h-[1px] bg-[var(--color-mba-gold)] transition-all duration-300 block"></span>
-                                    Home
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/gallery" className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-3 group text-sm md:text-base">
-                                    <span className="w-0 group-hover:w-3 h-[1px] bg-[var(--color-mba-gold)] transition-all duration-300 block"></span>
-                                    Gallery
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/blog" className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-3 group text-sm md:text-base">
-                                    <span className="w-0 group-hover:w-3 h-[1px] bg-[var(--color-mba-gold)] transition-all duration-300 block"></span>
-                                    Blog
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/about" className="text-white/70 hover:text-white transition-colors duration-300 flex items-center gap-3 group text-sm md:text-base">
-                                    <span className="w-0 group-hover:w-3 h-[1px] bg-[var(--color-mba-gold)] transition-all duration-300 block"></span>
-                                    About
-                                </Link>
-                            </li>
+                            {[
+                                { href: "/", label: "Home" },
+                                { href: "/#about", label: "About" },
+                                { href: "/#contact", label: "Contact" },
+                                { href: "/blog", label: "Blog" }
+                            ].map((item) => (
+                                <li key={item.label}>
+                                    <Link href={item.href} className="inline-flex items-center text-[13px] text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] hover:translate-x-1 transition-all duration-300 tracking-wide font-sans font-light group">
+                                        <span className="w-0 group-hover:w-3.5 h-[1px] bg-[var(--color-primary)] mr-0 group-hover:mr-2.5 transition-all duration-300 block"></span>
+                                        {item.label}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    {/* Column 2: Connect */}
-                    <div className="space-y-6">
-                        <h3 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-6 font-[family-name:var(--font-oswald)]">Social</h3>
-                        <div className="flex gap-4 mb-6">
+                    {/* Column 3: Inquiries & Socials */}
+                    <div className="lg:col-span-3 space-y-6">
+                        <h3 className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] font-display">
+                            Connect
+                        </h3>
+                        <div className="space-y-3">
+                            <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-text-muted)] font-semibold font-sans">For inquiries:</p>
+                            <a 
+                                href="mailto:jeffrey.drai@yorku.ca" 
+                                className="text-[16px] text-[var(--color-text-primary)] hover:text-[var(--color-primary)] font-medium transition-colors duration-300 inline-block pb-1 border-b border-[var(--color-border)] hover:border-[var(--color-primary)]"
+                            >
+                                jeffrey.drai@yorku.ca
+                            </a>
+                        </div>
+                        <div className="flex gap-3.5 pt-4">
                             {[
                                 { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
                                 { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
@@ -54,45 +82,31 @@ export default function Footer() {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-12 h-12 border border-white/10 rounded-full flex items-center justify-center text-white/60 hover:bg-white hover:text-[var(--color-mba-navy)] hover:border-white transition-all duration-300"
+                                    className="w-10 h-10 border border-[var(--color-border)] rounded-full flex items-center justify-center text-[var(--color-text-secondary)] bg-[var(--color-surface)] hover:bg-[var(--color-primary)]/[0.08] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]/30 transition-all duration-300"
                                     aria-label={social.label}
                                 >
-                                    <social.Icon size={18} />
+                                    <social.Icon size={16} />
                                 </a>
                             ))}
                         </div>
-                        <div className="space-y-2">
-                            <p className="text-sm text-white/50">For inquiries:</p>
-                            <a href="mailto:jeffrey.drai@yorku.ca" className="text-base text-white hover:text-[var(--color-mba-gold)] transition-colors inline-block pb-1 border-b border-transparent hover:border-[var(--color-mba-gold)]">
-                                jeffrey.drai@yorku.ca
-                            </a>
-                        </div>
                     </div>
 
-                    {/* Column 3: About */}
-                    <div className="space-y-6 md:col-span-2 lg:col-span-1">
-                        <h3 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-6 font-[family-name:var(--font-oswald)]">Jeffrey Mawusi Drai</h3>
-                        <p className="text-base text-white/70 leading-relaxed mb-6 font-light max-w-md font-[family-name:var(--font-playfair)]">
-                            Ghanaian bioengineering researcher and scholar based at York University. Dedicated to medical innovation, STEM advocacy, and youth empowerment.
-                        </p>
-                        <Link
-                            href="/about"
-                            className="inline-flex items-center text-sm font-medium text-white hover:text-[var(--color-mba-gold)] transition-colors group tracking-widest uppercase"
-                        >
-                            Read Full Bio
-                            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                        </Link>
-                    </div>
                 </div>
 
-                {/* Copyright */}
-                <div className="mt-16 md:mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-white/30 tracking-wide">
-                    <p className="text-center md:text-left">
-                        © {currentYear} Jeffrey Mawusi Drai. All rights reserved.
-                    </p>
-                    <div className="flex gap-8">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                {/* Footer Divider / Calibration Line */}
+                <div className="mt-16 md:mt-20 pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row justify-between items-center gap-6 relative">
+                    {/* Precision technical marker */}
+                    <div className="absolute top-[-1px] left-1/2 -translate-x-1/2 w-8 h-[1px] bg-[var(--color-primary)]/40 hidden sm:block" />
+                    
+                    <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-[10px] text-[var(--color-text-muted)] tracking-[0.15em] font-mono uppercase">
+                        <span>© {currentYear} Jeffrey Drai. All rights reserved.</span>
+                        <span className="hidden sm:inline text-[var(--color-border)]">|</span>
+                        <span>SYS_COORD_04 // FOOTER</span>
+                    </div>
+                    
+                    <div className="flex gap-6 text-[10px] tracking-[0.2em] font-bold uppercase">
+                        <a href="#" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors duration-300">Privacy Policy</a>
+                        <a href="#" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors duration-300">Terms</a>
                     </div>
                 </div>
             </div>
