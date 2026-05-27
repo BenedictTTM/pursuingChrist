@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { z } from 'zod';
 import { Loader2, Sparkles, Lock } from 'lucide-react';
@@ -11,7 +11,7 @@ const LogInSchema = z.object({
   password: z.string().min(6, 'Password must be at least 6 characters'),
 });
 
-export default function LogInPage() {
+function AuthForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   
@@ -248,5 +248,13 @@ export default function LogInPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LogInPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#FAF9F6] flex items-center justify-center"><Loader2 className="w-6 h-6 animate-spin text-[#C5A576]" /></div>}>
+      <AuthForm />
+    </Suspense>
   );
 }
