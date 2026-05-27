@@ -25,7 +25,7 @@ export default function Footer() {
                         </p>
                         <div className="pt-2">
                             <Link
-                                href="/about"
+                                href="/#about"
                                 className="inline-flex items-center text-[10px] font-bold tracking-[0.25em] text-[var(--color-primary)] hover:text-[var(--color-primary-light)] transition-colors duration-300 uppercase group"
                             >
                                 Read Full Biography
