@@ -59,7 +59,7 @@ export default function EditPostPage({ params }: { params: Promise<{ id: string 
     };
 
     const updatePostMutation = useMutation({
-        queryKey: ['updatePost', id],
+        mutationKey: ['updatePost', id],
         mutationFn: async (formData: FormData) => {
             const response = await fetch(`/api/posts/${id}`, {
                 method: 'PUT',

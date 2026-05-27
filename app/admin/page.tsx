@@ -60,6 +60,7 @@ export default function AdminPage() {
             },
             cancel: {
                 label: 'Cancel',
+                onClick: () => {},
             },
             duration: 8000,
         });

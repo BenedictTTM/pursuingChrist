@@ -1,5 +1,5 @@
 import SplitHero from "@/components/SplitHero";
-import BioExcerpt from "@/components/BioExcerpt";
+
 import Footer from "@/components/Footer";
 import Blog from "@/components/Blog";
 import WhoAmI from "@/components/WhoAmI";
