@@ -36,3 +36,8 @@ model Like {
   @@unique([postId, userId]) // Enforce one like per user per post
   @@index([postId])
 }
+
+model Admin {
+  id       String @id @default(cuid())
+  password String
+}

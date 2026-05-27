@@ -1,9 +1,10 @@
 'use client';
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Edit, Trash2, Plus, Loader2, BookOpen } from 'lucide-react';
+import { Edit, Trash2, Plus, Loader2, BookOpen, LogOut } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 
@@ -17,6 +18,7 @@ interface Post {
 }
 
 export default function AdminPage() {
+    const router = useRouter();
     const queryClient = useQueryClient();
 
     const { data: posts = [], isLoading, isError, error } = useQuery<Post[]>({
@@ -389,6 +391,20 @@ export default function AdminPage() {
                         </Link>
                     </motion.div>
                 )}
+
+                {/* System Logout Button */}
+                <div className="mt-12 flex justify-center">
+                    <button
+                        onClick={() => {
+                            localStorage.removeItem('admin_token');
+                            router.push('/admin/auth');
+                        }}
+                        className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#888A93] hover:text-red-500 transition-colors border border-[#C5A576]/15 hover:border-red-200 px-6 py-3 rounded-md shadow-sm bg-white/40 backdrop-blur-sm"
+                    >
+                        <LogOut size={13} />
+                        System Logout
+                    </button>
+                </div>
             </div>
         </div>
     );
