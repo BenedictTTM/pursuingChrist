@@ -47,7 +47,7 @@ export default function SplitHero() {
           </div>
 
           {/* ── Main layout: headline absolutely positioned over content row ── */}
-          <div className="relative mt-6 flex min-h-[380px] flex-col lg:flex-row lg:items-stretch">
+          <div className="relative mt-4 flex min-h-[380px] flex-col lg:flex-row lg:items-stretch">
 
             {/* ── ABSOLUTELY POSITIONED HEADLINE ──────────────────────────────
                 position: absolute  → taken out of flow, spans from left edge
@@ -83,7 +83,7 @@ export default function SplitHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-20 flex w-full flex-col items-start justify-start pb-0 pt-[160px] lg:w-[45%] lg:pr-8 lg:pt-[220px]"
+              className="relative z-20 flex w-full flex-col items-start justify-start pb-0 pt-[130px] lg:w-[45%] lg:pr-8 lg:pt-[180px]"
             >
               {/* Tagline */}
               <div className="flex gap-3 sm:gap-4">
