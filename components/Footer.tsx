@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -16,9 +17,15 @@ export default function Footer() {
                     {/* Column 1: Editorial Branding & Bio */}
                     <div className="lg:col-span-5 space-y-6">
                         <div className="flex items-center gap-3">
-                            <span className="text-2xl font-serif italic tracking-wide text-[var(--color-text-primary)]" style={{ fontFamily: "var(--font-cormorant)" }}>
-                                Jeffrey Drai <span className="not-italic text-xl text-[var(--color-primary)]">ッ</span>
-                            </span>
+                            <Link href="/" className="hover:opacity-80 transition-opacity duration-300">
+                                <Image 
+                                    src="/logo-transparent.png" 
+                                    alt="Logo" 
+                                    width={120} 
+                                    height={60} 
+                                    className="h-12 w-auto object-contain"
+                                />
+                            </Link>
                         </div>
                         <p className="text-[14px] text-[var(--color-text-secondary)] leading-[1.8] font-serif italic font-light max-w-md" style={{ fontFamily: "var(--font-cormorant)" }}>
                             Ghanaian bioengineering researcher and scholar based at York University. Dedicated to bridging the gap between biological complexity, technological precision, and advanced computational engineering.
