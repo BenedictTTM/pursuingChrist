@@ -29,7 +29,7 @@ export default function BlogRow({ post }: BlogRowProps) {
                     {post.category || "Article"}
                 </div>
 
-                <h3 className="text-base md:text-lg font-serif font-light text-[var(--color-mba-text-primary)] mb-2 leading-snug tracking-tight group-hover:text-[var(--color-mba-gold)] transition-colors duration-300 line-clamp-2">
+                <h3 className="text-base md:text-lg font-poppins font-light text-[var(--color-mba-text-primary)] mb-2 leading-snug tracking-tight group-hover:text-[var(--color-mba-gold)] transition-colors duration-300 line-clamp-2">
                     <Link href={`/blog/${post.id}`}>
                         {post.title}
                     </Link>

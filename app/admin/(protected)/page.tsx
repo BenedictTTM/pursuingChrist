@@ -62,7 +62,7 @@ export default function AdminPage() {
             },
             cancel: {
                 label: 'Cancel',
-                onClick: () => {},
+                onClick: () => { },
             },
             duration: 8000,
         });
@@ -71,7 +71,7 @@ export default function AdminPage() {
     if (isLoading) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-[#FAF9F6] font-sans">
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="flex flex-col items-center gap-4"
@@ -89,9 +89,9 @@ export default function AdminPage() {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-[#FAF9F6] font-sans px-4 text-center">
                 <div className="border border-red-200/50 bg-red-50/30 rounded-xl p-8 max-w-md shadow-sm">
-                    <p className="text-red-500 font-serif italic text-lg mb-2">System Interruption</p>
+                    <p className="text-red-500 font-poppins italic text-lg mb-2">System Interruption</p>
                     <p className="text-xs text-[#888A93] tracking-wide mb-6">{error.message}</p>
-                    <button 
+                    <button
                         onClick={() => window.location.reload()}
                         className="px-4 py-2 border border-red-200 text-red-600 rounded-md text-xs uppercase tracking-wider font-bold hover:bg-red-50 transition-all"
                     >
@@ -104,7 +104,7 @@ export default function AdminPage() {
 
     return (
         <div className="min-h-screen bg-[#FAF9F6] text-[#1F2027] font-sans relative overflow-hidden pb-12">
-            
+
             {/* Fine architectural layout grid and lines */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(197,165,118,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(197,165,118,0.02)_1px,transparent_1px)] bg-[size:5rem_5rem] pointer-events-none -z-10" />
             <div className="absolute top-0 left-[8%] right-[8%] h-[1px] bg-gradient-to-r from-transparent via-[#C5A576]/15 to-transparent pointer-events-none" />
@@ -116,9 +116,9 @@ export default function AdminPage() {
             </div>
 
             <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-12 xl:px-20 mt-10">
-                
+
                 {/* Header Section */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -129,10 +129,10 @@ export default function AdminPage() {
                             <div className="w-5 h-[1px] bg-[#C5A576]" />
                             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A576]">Jeffrey Drai Ledger</span>
                         </div>
-                        <h1 
+                        <h1
                             className="font-display font-extrabold uppercase leading-none tracking-tight select-none text-4xl sm:text-5xl lg:text-6xl text-[#111116]"
                         >
-                            Admin <span className="font-serif italic font-normal tracking-wide text-[#C5A576]">Dashboard</span>
+                            Admin <span className="font-poppins italic font-normal tracking-wide text-[#C5A576]">Dashboard</span>
                         </h1>
                     </div>
 
@@ -193,7 +193,7 @@ export default function AdminPage() {
                 </motion.div>
 
                 {/* Desktop Editorial Ledger View */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -237,7 +237,7 @@ export default function AdminPage() {
                                         </div>
                                     </td>
                                     <td className="p-6">
-                                        <h3 className="font-serif text-[17px] text-[#111116] font-medium leading-snug group-hover/row:text-[#C5A576] transition-colors duration-300 line-clamp-1">
+                                        <h3 className="font-poppins text-[17px] text-[#111116] font-medium leading-snug group-hover/row:text-[#C5A576] transition-colors duration-300 line-clamp-1">
                                             {post.title}
                                         </h3>
                                         {post.excerpt ? (
@@ -251,11 +251,10 @@ export default function AdminPage() {
                                         )}
                                     </td>
                                     <td className="p-6">
-                                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider ${
-                                            post.published
+                                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider ${post.published
                                                 ? 'bg-[#E6F4EA] text-[#137333] border border-[#C1E7C4]'
                                                 : 'bg-[#F1F3F4] text-[#3C4043] border border-[#DADCE0]'
-                                        }`}>
+                                            }`}>
                                             {post.published ? 'Published' : 'Draft'}
                                         </span>
                                     </td>
@@ -292,15 +291,15 @@ export default function AdminPage() {
                 </motion.div>
 
                 {/* Mobile Grid/Card View */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                     className="md:hidden space-y-4"
                 >
                     {posts.map((post) => (
-                        <div 
-                            key={post.id} 
+                        <div
+                            key={post.id}
                             className="bg-white rounded-xl shadow-sm border border-[#C5A576]/15 p-5 relative overflow-hidden"
                         >
                             {/* Minor technical border tick */}
@@ -324,11 +323,10 @@ export default function AdminPage() {
                                 </div>
                                 <div className="flex-1 min-w-0">
                                     <div className="flex items-center gap-2.5 mb-1.5 flex-wrap">
-                                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider ${
-                                            post.published
+                                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider ${post.published
                                                 ? 'bg-[#E6F4EA] text-[#137333] border border-[#C1E7C4]'
                                                 : 'bg-[#F1F3F4] text-[#3C4043] border border-[#DADCE0]'
-                                        }`}>
+                                            }`}>
                                             {post.published ? 'Published' : 'Draft'}
                                         </span>
                                         <span className="text-[10px] text-[#888A93] font-medium font-mono">
@@ -339,7 +337,7 @@ export default function AdminPage() {
                                             })}
                                         </span>
                                     </div>
-                                    <h3 className="font-serif text-base text-[#111116] font-semibold leading-tight line-clamp-2">
+                                    <h3 className="font-poppins text-base text-[#111116] font-semibold leading-tight line-clamp-2">
                                         {post.title}
                                     </h3>
                                 </div>
@@ -373,7 +371,7 @@ export default function AdminPage() {
                 </motion.div>
 
                 {posts.length === 0 && (
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         className="py-24 text-center bg-white rounded-xl border border-[#C5A576]/15 relative"
@@ -382,7 +380,7 @@ export default function AdminPage() {
                         <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t border-l border-[#C5A576]/30" />
                         <div className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b border-r border-[#C5A576]/30" />
 
-                        <p className="text-[#888A93] text-lg font-serif italic mb-4">No editorial stories compiled yet.</p>
+                        <p className="text-[#888A93] text-lg font-poppins italic mb-4">No editorial stories compiled yet.</p>
                         <Link
                             href="/admin/create"
                             className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#C5A576] hover:text-[#111116] border-b border-[#C5A576]/30 hover:border-[#111116] transition-all pb-1 cursor-pointer"

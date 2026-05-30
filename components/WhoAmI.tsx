@@ -6,15 +6,15 @@ import { motion } from "framer-motion";
 export default function WhoAmI() {
   return (
     <section className="relative py-20 md:py-28 lg:py-36 xl:py-40 px-4 md:px-6 lg:px-12 xl:px-20 bg-transparent overflow-hidden">
-      
+
       {/* SECTION COORDINATES - Subtle brand-consistent absolute positioning anchor */}
       <div className="absolute left-6 top-12 hidden md:block text-[9px] text-white/15 tracking-[0.3em] uppercase select-none pointer-events-none">
         02 // ABOUT
       </div>
-      
+
       {/* AMBIENT BACKGROUND SYSTEM: Grid + Radials + Scientific Geometry */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.012)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.012)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none opacity-40 -z-10" />
-      
+
       {/* Luxury soft gold glowing ambient orbs */}
       <div className="absolute top-[15%] left-[-8%] w-[45%] h-[45%] bg-[var(--color-primary)]/[0.03] blur-[150px] rounded-full pointer-events-none -z-10" />
       <div className="absolute bottom-[15%] right-[-8%] w-[45%] h-[45%] bg-[var(--color-primary)]/[0.03] blur-[150px] rounded-full pointer-events-none -z-10" />
@@ -40,7 +40,7 @@ export default function WhoAmI() {
 
       {/* MAIN TWO-COLUMN ELEGANT COMPOSITION */}
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16 xl:gap-20">
-        
+
         {/* COLUMN 1 - LUXURY PORTRAIT FRAMING WITH PRECISION MARKINGS */}
         <div className="w-full lg:w-[42%] flex justify-center lg:justify-start relative z-10">
           <motion.div
@@ -67,8 +67,8 @@ export default function WhoAmI() {
 
             {/* Premium editorial image layout with smooth zoom and grayscale transition */}
             <div className="absolute inset-4 rounded-xl overflow-hidden border border-white/10 bg-neutral-950 transition-all duration-700 group-hover:border-white/20">
-              <Image 
-                src="/mba-headshot.jpg" 
+              <Image
+                src="/mba-headshot.jpg"
                 alt="Jeffrey Mawusi Drai Editorial Portrait"
                 fill
                 priority
@@ -119,15 +119,15 @@ export default function WhoAmI() {
             </div>
 
             {/* High-Impact Display Headline */}
-            <h2 
+            <h2
               className="font-display font-extrabold uppercase leading-[0.95] tracking-[-0.04em] text-white mb-6 text-balance select-none"
               style={{
                 fontSize: "clamp(36px, 5vw, 64px)",
               }}
             >
               Bioengineering <br />
-              <span 
-                className="block text-[var(--color-primary)] font-serif italic font-normal tracking-wide mt-2"
+              <span
+                className="block text-[var(--color-primary)] font-poppins italic font-normal tracking-wide mt-2"
                 style={{
                   fontFamily: "var(--font-cormorant)",
                 }}
@@ -166,7 +166,7 @@ export default function WhoAmI() {
             {/* Inspirational Quote Block */}
             <div className="mt-2 relative pl-6 md:pl-8 py-1 md:py-2 border-l-[3px] border-[var(--color-primary)] bg-gradient-to-r from-[#1A1A1A]/60 to-transparent rounded-r-lg max-w-[650px]">
               <p
-                className="text-[15px] md:text-[17px] text-white/90 italic leading-[1.7] tracking-wide mb-3 font-serif"
+                className="text-[15px] md:text-[17px] text-white/90 italic leading-[1.7] tracking-wide mb-3 font-poppins"
                 style={{ fontFamily: "var(--font-cormorant)" }}
               >
                 "Engineering is the disciplined art of turning ideas into reality with precision, purpose, and relentless curiosity."

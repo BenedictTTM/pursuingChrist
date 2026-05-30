@@ -13,21 +13,21 @@ export default function Footer() {
 
             <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-20 md:py-24 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16">
-                    
+
                     {/* Column 1: Editorial Branding & Bio */}
                     <div className="lg:col-span-5 space-y-6">
                         <div className="flex items-center gap-3">
                             <Link href="/" className="hover:opacity-80 transition-opacity duration-300">
-                                <Image 
-                                    src="/logo.png" 
-                                    alt="Logo" 
-                                    width={120} 
-                                    height={60} 
+                                <Image
+                                    src="/logo.png"
+                                    alt="Logo"
+                                    width={120}
+                                    height={60}
                                     className="h-12 w-auto object-contain"
                                 />
                             </Link>
                         </div>
-                        <p className="text-[14px] text-[var(--color-text-secondary)] leading-[1.8] font-serif italic font-light max-w-md" style={{ fontFamily: "var(--font-cormorant)" }}>
+                        <p className="text-[14px] text-[var(--color-text-secondary)] leading-[1.8] font-poppins italic font-light max-w-md" style={{ fontFamily: "var(--font-cormorant)" }}>
                             Ghanaian bioengineering researcher and scholar based at York University. Dedicated to bridging the gap between biological complexity, technological precision, and advanced computational engineering.
                         </p>
                         <div className="pt-2">
@@ -70,8 +70,8 @@ export default function Footer() {
                         </h3>
                         <div className="space-y-3">
                             <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-text-muted)] font-semibold font-sans">For inquiries:</p>
-                            <a 
-                                href="mailto:jeffrey.drai@yorku.ca" 
+                            <a
+                                href="mailto:jeffrey.drai@yorku.ca"
                                 className="text-[16px] text-[var(--color-text-primary)] hover:text-[var(--color-primary)] font-medium transition-colors duration-300 inline-block pb-1 border-b border-[var(--color-border)] hover:border-[var(--color-primary)]"
                             >
                                 jeffrey.drai@yorku.ca
@@ -104,13 +104,13 @@ export default function Footer() {
                 <div className="mt-16 md:mt-20 pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row justify-between items-center gap-6 relative">
                     {/* Precision technical marker */}
                     <div className="absolute top-[-1px] left-1/2 -translate-x-1/2 w-8 h-[1px] bg-[var(--color-primary)]/40 hidden sm:block" />
-                    
+
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-[10px] text-[var(--color-text-muted)] tracking-[0.15em] font-mono uppercase">
                         <span>© {currentYear} Jeffrey Drai. All rights reserved.</span>
                         <span className="hidden sm:inline text-[var(--color-border)]">|</span>
                         <span>SYS_COORD_04 // FOOTER</span>
                     </div>
-                    
+
                     <div className="flex gap-6 text-[10px] tracking-[0.2em] font-bold uppercase">
                         <a href="#" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors duration-300">Privacy Policy</a>
                         <a href="#" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors duration-300">Terms</a>

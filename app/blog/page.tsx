@@ -29,7 +29,7 @@ export default async function BlogPage() {
     }));
 
     return (
-        <div 
+        <div
             className="min-h-screen bg-[#F6F2EC] text-[#111111] font-sans relative overflow-hidden"
             style={{
                 // Local CSS variables override to scope reused components (BlogCard, BlogRow, Footer) to premium Light Mode dynamically
@@ -49,7 +49,7 @@ export default async function BlogPage() {
                 ['--color-primary' as any]: '#1C5364', // Deep teal for primary UI buttons & elements
             }}
         >
-            
+
             {/* Ambient background wash & depth matching main pages */}
             <div className="absolute inset-0 bg-[#F6F2EC] -z-20" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.75),transparent_70%),radial-gradient(circle_at_80%_80%,rgba(240,230,218,0.5),transparent_60%)] pointer-events-none -z-10" />
@@ -74,7 +74,7 @@ export default async function BlogPage() {
                             Back to Home
                         </Link>
                     </div>
-                    
+
                     {/* Header Section */}
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1C5364]/10 text-[#1C5364] text-[10px] uppercase tracking-[0.25em] font-bold mb-4">
@@ -82,7 +82,7 @@ export default async function BlogPage() {
                             Insights & Faith
                         </div>
 
-                        <h1 
+                        <h1
                             className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#111111] uppercase tracking-tight text-center mb-6"
                             style={{
                                 fontFamily: '"roc-grotesk-extra-wide", "Arial Black", sans-serif',
@@ -102,7 +102,7 @@ export default async function BlogPage() {
 
                         {/* Hero Section: Featured + Sidebar */}
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                            
+
                             {/* Featured Post (Left) - Takes 7/12 columns */}
                             <div className="lg:col-span-7">
                                 {blogPosts.length > 0 && (
@@ -152,8 +152,8 @@ export default async function BlogPage() {
                         {blogPosts.length > 4 ? (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                                 {blogPosts.slice(4).map((post) => (
-                                    <div 
-                                        key={post.id} 
+                                    <div
+                                        key={post.id}
                                         className="relative group bg-white/70 backdrop-blur-md border border-[#E3D9CE]/60 rounded-3xl p-6 shadow-[0_12px_40px_rgba(28,83,100,0.03)] transition-all duration-500 hover:border-[#C8BFB3] hover:shadow-[0_20px_50px_rgba(28,83,100,0.08)] hover:-translate-y-1 h-full"
                                     >
                                         <BlogCard post={post} />
@@ -162,13 +162,13 @@ export default async function BlogPage() {
                             </div>
                         ) : blogPosts.length <= 1 ? (
                             <div className="py-16 text-center bg-white/70 backdrop-blur-md border border-[#E3D9CE]/60 rounded-3xl relative shadow-[0_12px_40px_rgba(28,83,100,0.03)] max-w-xl mx-auto w-full">
-                                <p className="text-[#8C8275] text-sm font-serif italic">More articles will be released soon.</p>
+                                <p className="text-[#8C8275] text-sm font-poppins italic">More articles will be released soon.</p>
                             </div>
                         ) : null}
                     </div>
                 </div>
             </main>
-            
+
             <Footer />
         </div>
     );

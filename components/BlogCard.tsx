@@ -20,7 +20,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                         {post.category}
                     </span>
                 )}
-                
+
                 <Image
                     src={post.image}
                     alt={post.title}
@@ -33,7 +33,7 @@ export default function BlogCard({ post }: BlogCardProps) {
 
             {/* Content */}
             <div className="flex flex-col flex-1 px-1">
-                <h3 className="text-2xl md:text-[1.65rem] leading-[1.3] font-serif font-medium text-[#111111] mb-3 tracking-tight normal-case group-hover:text-[#FF5A1F] transition-colors duration-300">
+                <h3 className="text-2xl md:text-[1.65rem] leading-[1.3] font-poppins font-medium text-[#111111] mb-3 tracking-tight normal-case group-hover:text-[#FF5A1F] transition-colors duration-300">
                     <Link href={`/blog/${post.id}`}>
                         {post.title}
                     </Link>

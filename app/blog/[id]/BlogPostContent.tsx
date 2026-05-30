@@ -118,7 +118,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
                                 {post.category || "Reflections"}
                             </div>
 
-                            <h1 
+                            <h1
                                 className="font-extrabold text-[clamp(2.25rem,5.5vw,4.5rem)] text-[#111111] uppercase tracking-tight leading-[1.1] mb-6 md:mb-8 px-2 md:px-0"
                                 style={{
                                     fontFamily: '"roc-grotesk-extra-wide", "Arial Black", sans-serif',
@@ -181,7 +181,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
 
                                 <div className="space-y-1">
                                     <h4 className="text-[10px] font-sans tracking-widest uppercase text-[#8C8275] font-bold">Author</h4>
-                                    <p className="text-xs font-serif font-bold text-[#111111]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Jeffrey Drai</p>
+                                    <p className="text-xs font-poppins font-bold text-[#111111]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Jeffrey Drai</p>
                                     <p className="text-[10px] text-[#8C8275] leading-normal font-semibold">Faith & Discipleship</p>
                                 </div>
 
@@ -232,7 +232,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
                                         transition={{ duration: 0.8 }}
                                         className="relative pl-5 md:pl-8 border-l-2 border-[#FF5A1F] mb-10 md:mb-16"
                                     >
-                                        <p className="text-[1.25rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-serif italic font-light tracking-wide break-words hyphens-auto" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+                                        <p className="text-[1.25rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-poppins italic font-light tracking-wide break-words hyphens-auto" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
                                             {post.excerpt}
                                         </p>
                                     </motion.div>
@@ -251,7 +251,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
                                         [word-break:break-word]
                                         [overflow-wrap:anywhere]
 
-                                        prose-headings:font-serif prose-headings:text-[#111111] prose-headings:font-light prose-headings:tracking-tight
+                                        prose-headings:font-poppins prose-headings:text-[#111111] prose-headings:font-light prose-headings:tracking-tight
                                         prose-h2:text-2xl md:prose-h2:text-[2.25rem] prose-h2:mt-12 md:prose-h2:mt-16 prose-h2:mb-6 prose-h2:pb-4 prose-h2:border-b prose-h2:border-[#E3D9CE]/60
                                         prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-8 md:prose-h3:mt-10 prose-h3:mb-4
 
@@ -259,7 +259,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
 
                                         prose-a:text-[#1C5364] prose-a:font-medium prose-a:no-underline prose-a:border-b prose-a:border-[#1C5364]/20 hover:prose-a:border-[#1C5364] prose-a:transition-all prose-a:duration-300
 
-                                        prose-blockquote:border-l-2 prose-blockquote:border-[#FF5A1F] prose-blockquote:pl-5 md:prose-blockquote:pl-6 prose-blockquote:pr-5 md:prose-blockquote:pr-6 prose-blockquote:py-4 md:prose-blockquote:py-6 prose-blockquote:my-8 md:prose-blockquote:my-12 prose-blockquote:italic prose-blockquote:text-lg md:prose-blockquote:text-xl prose-blockquote:font-serif prose-blockquote:text-[#111111] prose-blockquote:bg-white/40 prose-blockquote:rounded-r-lg
+                                        prose-blockquote:border-l-2 prose-blockquote:border-[#FF5A1F] prose-blockquote:pl-5 md:prose-blockquote:pl-6 prose-blockquote:pr-5 md:prose-blockquote:pr-6 prose-blockquote:py-4 md:prose-blockquote:py-6 prose-blockquote:my-8 md:prose-blockquote:my-12 prose-blockquote:italic prose-blockquote:text-lg md:prose-blockquote:text-xl prose-blockquote:font-poppins prose-blockquote:text-[#111111] prose-blockquote:bg-white/40 prose-blockquote:rounded-r-lg
 
                                         prose-strong:font-semibold prose-strong:text-[#111111]
 

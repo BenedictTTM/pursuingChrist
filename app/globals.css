@@ -46,7 +46,7 @@
   --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-  --font-sans: var(--font-inter), sans-serif;
+  --font-sans: var(--font-poppins), sans-serif;
   --font-display: var(--font-brotheric), sans-serif;
   --font-serif: var(--font-cormorant), serif;
 }
@@ -152,24 +152,28 @@
   }
 
   .section-padding {
-    padding: 5rem 1rem; /* 80px mobile */
+    padding: 5rem 1rem;
+    /* 80px mobile */
   }
 
   @media (min-width: 768px) {
     .section-padding {
-      padding: 7rem 1.5rem; /* 112px tablet */
+      padding: 7rem 1.5rem;
+      /* 112px tablet */
     }
   }
 
   @media (min-width: 1024px) {
     .section-padding {
-      padding: 9rem 3rem; /* 144px laptop */
+      padding: 9rem 3rem;
+      /* 144px laptop */
     }
   }
 
   @media (min-width: 1440px) {
     .section-padding {
-      padding: 10rem 5rem; /* 160px desktop */
+      padding: 10rem 5rem;
+      /* 160px desktop */
     }
   }
 
@@ -222,18 +226,20 @@
 @keyframes glowBip {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 0 rgba(246,236,212,0);
-    background-color: rgba(246,236,212,0.95);
+    box-shadow: 0 0 0 rgba(246, 236, 212, 0);
+    background-color: rgba(246, 236, 212, 0.95);
   }
+
   40% {
     transform: scale(1.18);
-    box-shadow: 0 0 10px rgba(246,236,212,0.55), 0 0 20px rgba(246,236,212,0.25);
-    background-color: rgba(255,246,210,1);
+    box-shadow: 0 0 10px rgba(246, 236, 212, 0.55), 0 0 20px rgba(246, 236, 212, 0.25);
+    background-color: rgba(255, 246, 210, 1);
   }
+
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 rgba(246,236,212,0);
-    background-color: rgba(246,236,212,0.95);
+    box-shadow: 0 0 0 rgba(246, 236, 212, 0);
+    background-color: rgba(246, 236, 212, 0.95);
   }
 }
 
@@ -242,27 +248,35 @@
   0% {
     transform: translate3d(0px, 0px, 0) scale(1);
   }
+
   33% {
     transform: translate3d(30px, -40px, 0) scale(1.08);
   }
+
   66% {
     transform: translate3d(-25px, 20px, 0) scale(0.95);
   }
+
   100% {
     transform: translate3d(0px, 0px, 0) scale(1);
   }
 }
 
 @keyframes blob-float-centered {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate3d(-50%, -25%, 0) scale(1);
   }
+
   25% {
     transform: translate3d(-70%, 0%, 0) scale(1.08);
   }
+
   50% {
     transform: translate3d(-40%, 25%, 0) scale(0.95);
   }
+
   75% {
     transform: translate3d(-60%, 10%, 0) scale(1.04);
   }

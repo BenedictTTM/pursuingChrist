@@ -36,22 +36,57 @@ export default function SplitHero() {
         @import url('https://fonts.bunny.net/css?family=roc-grotesk-extra-wide:800');
       `}</style>
 
-      <div className="relative w-full overflow-hidden bg-[#F6F2EC] bg-[url('/bg2.jpg')] bg-cover bg-center text-[#111111]">
+      <div className="relative w-full overflow-hidden bg-[#F6F2EC] bg-[url('/bg1.png')] bg-cover bg-center text-[#111111]">
         {/* <AnimatedBlob /> */}
         {/* Background image with soft wash for legibility */}
         <div className="absolute inset-0 -z-20 bg-[#F7F3ED]/80 backdrop-blur-[1.5px]" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_8%,rgba(255,255,255,0.85),transparent_60%),radial-gradient(circle_at_75%_0%,rgba(255,255,255,0.7),transparent_55%),radial-gradient(circle_at_10%_85%,rgba(245,238,228,0.45),transparent_60%),linear-gradient(180deg,rgba(246,243,238,0.94),rgba(246,243,238,0.9))]" />
 
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-8 pb-14 pt-32 md:px-12 lg:pb-28 lg:pt-44">
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-8 pb-14 pt-20 md:px-12 lg:pb-28 lg:pt-28">
 
           {/* ── Pill badge ── */}
-          <div className="mx-auto flex w-full max-w-3xl items-center justify-between text-[10px] uppercase tracking-[0.4em] text-[#5B5B5B]">
-            <span>Faith</span>
-            <div className="h-px flex-1 mx-4 bg-[#E3D9CE]/50" />
-            <span>Purpose</span>
-            <div className="h-px flex-1 mx-4 bg-[#E3D9CE]/50" />
-            <span>Discipleship</span>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
+            className="mx-auto flex w-full max-w-3xl items-center justify-between"
+          >
+            <span
+              style={{ fontFamily: "var(--font-cormorant)" }}
+              className="group inline-flex items-center gap-1 sm:gap-1.5 text-[#1C5364] text-[7px] sm:text-[8.5px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.25em] transition-all duration-300 hover:text-[#FF5A1F] cursor-pointer"
+            >
+              <span className="w-1 h-1 rounded-full bg-[#FF5A1F] animate-pulse" />
+              Faith
+            </span>
+
+            <div className="mx-2 sm:mx-6 flex flex-1 items-center justify-center gap-1.5 sm:gap-2.5">
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#E3D9CE]/80" />
+              <span className="text-[7px] sm:text-[9px] text-[#C5A576] select-none opacity-80">✦</span>
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#E3D9CE]/80" />
+            </div>
+
+            <span
+              style={{ fontFamily: "var(--font-cormorant)" }}
+              className="group inline-flex items-center gap-1 sm:gap-1.5 text-[#1C5364] text-[7px] sm:text-[8.5px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.25em] transition-all duration-300 hover:text-[#FF5A1F] cursor-pointer"
+            >
+              <span className="w-1 h-1 rounded-full bg-[#FF5A1F] animate-pulse" />
+              Purpose
+            </span>
+
+            <div className="mx-2 sm:mx-6 flex flex-1 items-center justify-center gap-1.5 sm:gap-2.5">
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#E3D9CE]/80" />
+              <span className="text-[7px] sm:text-[9px] text-[#C5A576] select-none opacity-80">✦</span>
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#E3D9CE]/80" />
+            </div>
+
+            <span
+              style={{ fontFamily: "var(--font-cormorant)" }}
+              className="group inline-flex items-center gap-1 sm:gap-1.5 text-[#1C5364] text-[7px] sm:text-[8.5px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.25em] transition-all duration-300 hover:text-[#FF5A1F] cursor-pointer"
+            >
+              <span className="w-1 h-1 rounded-full bg-[#FF5A1F] animate-pulse" />
+              Discipleship
+            </span>
+          </motion.div>
 
           {/* ── Main layout: headline absolutely positioned over content row ── */}
           <div className="relative mt-8 grid min-h-[380px] grid-cols-1 gap-12 lg:grid-cols-12 lg:items-stretch lg:gap-10">
@@ -108,13 +143,18 @@ export default function SplitHero() {
               className="relative z-20 flex w-full flex-col items-start justify-start pb-2 pt-[140px] lg:col-span-6 lg:pt-[190px]"
             >
               <div className="flex w-full flex-col items-start gap-8 sm:gap-9">
-                {/* Tagline */}
-                <div className="flex gap-3 sm:gap-4">
-                  <div className="w-[2px] sm:w-[3px] flex-shrink-0 self-stretch bg-[#027094]/80" />
-                  <p className="max-w-[320px] sm:max-w-[440px] text-[16px] sm:text-[19px] leading-[1.85] text-[#4e5355] font-serif italic font-" style={{ fontFamily: "var(--font-cormorant)" }}>
-                    Transforming the Total Man with the Total Word of God.
+                {/* Scripture Focus Promise */}
+                <div className="flex flex-col gap-1.5 max-w-[340px] sm:max-w-[440px]">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] text-[#C5A576] select-none">✦</span>
+                    <span className="text-[8.5px] uppercase tracking-[0.25em] text-[#C5A576] font-extrabold" style={{ fontFamily: "var(--font-poppins)" }}>Jeremiah 29:13</span>
+                    <span className="text-[7.5px] font-bold text-[#1C5364]/65 tracking-[0.1em] uppercase select-none">(NIV)</span>
+                  </div>
+                  <p className="text-[15px] sm:text-[17.5px] italic leading-[1.6] text-[#1C5364] font-semibold" style={{ fontFamily: "var(--font-cormorant)" }}>
+                    "You will seek me and find me when you seek me with all your heart."
                   </p>
                 </div>
+
 
                 {/* CTAs */}
                 <div className="flex flex-wrap items-center gap-4 sm:gap-10">
@@ -163,6 +203,27 @@ export default function SplitHero() {
                     priority
                   />
                 </div>
+
+                {/* Floating Mission Notification */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9, y: -15 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 1.0, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="absolute top-6 -right-4 sm:top-8 sm:-right-8 z-30 overflow-hidden rounded-[8px] border border-[#C5A576]/20 bg-white/55 p-2 px-3 shadow-[0_15px_30px_rgba(28,83,100,0.06)] backdrop-blur-[4px] max-w-[200px] sm:max-w-[220px]"
+                >
+                  <div className="absolute top-0 left-0 w-[2px] h-full bg-[#C5A576]/80" />
+                  <div className="flex items-start gap-1.5 pl-0.5">
+                    <span className="text-[7.5px] text-[#C5A576] mt-0.5 select-none animate-pulse">✦</span>
+                    <div className="flex flex-col gap-0.5">
+                      <p className="text-[5.5px] sm:text-[6px] uppercase tracking-[0.2em] text-[#C5A576]/90 font-bold mb-0.5" style={{ fontFamily: "var(--font-poppins)" }}>
+                        Our Sacred Mandate
+                      </p>
+                      <p className="text-[10px] sm:text-[11px] leading-[1.25] text-[#2C3B3E]/90 font-medium" style={{ fontFamily: "var(--font-cormorant)" }}>
+                        Transforming the <span className="italic font-bold text-[#FF5A1F]">Total Man</span> with the Total Word of God.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
 

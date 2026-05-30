@@ -94,7 +94,7 @@ export default function CreatePostPage() {
 
     return (
         <div className="min-h-screen bg-[#FAF9F6] text-[#1F2027] font-sans relative overflow-hidden pb-20">
-            
+
             {/* Fine architectural layout grid and lines */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(197,165,118,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(197,165,118,0.02)_1px,transparent_1px)] bg-[size:5rem_5rem] pointer-events-none -z-10" />
             <div className="absolute top-0 left-[8%] right-[8%] h-[1px] bg-gradient-to-r from-transparent via-[#C5A576]/15 to-transparent pointer-events-none" />
@@ -107,11 +107,11 @@ export default function CreatePostPage() {
 
             <form onSubmit={(e) => e.preventDefault()}>
                 <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-12 xl:px-20 pt-10">
-                    
+
                     {/* Editorial Breadcrumb Back Link */}
                     <div className="mb-6">
-                        <Link 
-                            href="/admin" 
+                        <Link
+                            href="/admin"
                             className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#C5A576] hover:text-[#111116] transition-colors group cursor-pointer"
                         >
                             <ArrowLeft size={11} className="group-hover:-translate-x-1 transition-transform duration-300" />
@@ -120,7 +120,7 @@ export default function CreatePostPage() {
                     </div>
 
                     {/* Header Page Title Block */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -131,10 +131,10 @@ export default function CreatePostPage() {
                                 <div className="w-5 h-[1px] bg-[#C5A576]" />
                                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A576]">Jeffrey Drai Ledger</span>
                             </div>
-                            <h1 
+                            <h1
                                 className="font-display font-extrabold uppercase leading-none tracking-tight select-none text-4xl sm:text-5xl text-[#111116]"
                             >
-                                Compose <span className="font-serif italic font-normal tracking-wide text-[#C5A576]">New Resource</span>
+                                Compose <span className="font-poppins italic font-normal tracking-wide text-[#C5A576]">New Resource</span>
                             </h1>
                         </div>
 
@@ -180,7 +180,7 @@ export default function CreatePostPage() {
                                     'Save Draft'
                                 )}
                             </motion.button>
-                            
+
                             <motion.button
                                 whileHover={{ scale: 1.01 }}
                                 whileTap={{ scale: 0.99 }}
@@ -243,16 +243,16 @@ export default function CreatePostPage() {
 
                     {/* Asymmetrical Split Column Layout */}
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        
+
                         {/* Main Editorial Form Area (Left 2 Columns) */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: -15 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.1, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                             className="lg:col-span-2 space-y-8"
                         >
                             <div className="bg-white border border-[#C5A576]/15 rounded-xl p-6 sm:p-8 shadow-[0_15px_50px_rgba(0,0,0,0.015)] relative">
-                                
+
                                 {/* Precision technical border ticks */}
                                 <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#C5A576]/40" />
                                 <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#C5A576]/40" />
@@ -274,9 +274,8 @@ export default function CreatePostPage() {
                                             type="text"
                                             name="title"
                                             id="title"
-                                            className={`w-full px-4 py-3 bg-[#FAF9F6] border rounded-lg focus:ring-2 focus:ring-[#C5A576]/10 focus:border-[#C5A576] outline-none transition-all duration-300 text-gray-900 placeholder-[#888A93]/50 text-base font-serif shadow-inner ${
-                                                errors.title ? 'border-red-400' : 'border-[#C5A576]/15'
-                                            }`}
+                                            className={`w-full px-4 py-3 bg-[#FAF9F6] border rounded-lg focus:ring-2 focus:ring-[#C5A576]/10 focus:border-[#C5A576] outline-none transition-all duration-300 text-gray-900 placeholder-[#888A93]/50 text-base font-poppins shadow-inner ${errors.title ? 'border-red-400' : 'border-[#C5A576]/15'
+                                                }`}
                                             placeholder="Enter a catchy editorial title..."
                                         />
                                         {errors.title && <p className="text-red-500 text-xs font-medium font-mono">{errors.title}</p>}
@@ -291,9 +290,8 @@ export default function CreatePostPage() {
                                             name="excerpt"
                                             id="excerpt"
                                             rows={3}
-                                            className={`w-full px-4 py-3 bg-[#FAF9F6] border rounded-lg focus:ring-2 focus:ring-[#C5A576]/10 focus:border-[#C5A576] outline-none transition-all duration-300 text-gray-900 placeholder-[#888A93]/50 text-sm leading-relaxed resize-none shadow-inner ${
-                                                errors.excerpt ? 'border-red-400' : 'border-[#C5A576]/15'
-                                            }`}
+                                            className={`w-full px-4 py-3 bg-[#FAF9F6] border rounded-lg focus:ring-2 focus:ring-[#C5A576]/10 focus:border-[#C5A576] outline-none transition-all duration-300 text-gray-900 placeholder-[#888A93]/50 text-sm leading-relaxed resize-none shadow-inner ${errors.excerpt ? 'border-red-400' : 'border-[#C5A576]/15'
+                                                }`}
                                             placeholder="Write a brief luxury synopsis for this story..."
                                         />
                                         {errors.excerpt && <p className="text-red-500 text-xs font-medium font-mono">{errors.excerpt}</p>}
@@ -304,9 +302,8 @@ export default function CreatePostPage() {
                                         <label htmlFor="content" className="block text-[10px] font-bold uppercase tracking-[0.25em] text-[#C5A576]">
                                             Content
                                         </label>
-                                        <div className={`overflow-hidden rounded-lg border bg-[#FAF9F6] shadow-inner ${
-                                            errors.content ? 'border-red-400' : 'border-[#C5A576]/15'
-                                        }`}>
+                                        <div className={`overflow-hidden rounded-lg border bg-[#FAF9F6] shadow-inner ${errors.content ? 'border-red-400' : 'border-[#C5A576]/15'
+                                            }`}>
                                             <Editor value={content} onChange={setContent} />
                                         </div>
                                         {errors.content && <p className="text-red-500 text-xs font-medium font-mono">{errors.content}</p>}
@@ -316,14 +313,14 @@ export default function CreatePostPage() {
                         </motion.div>
 
                         {/* Settings & Asset Meta Sidebar Area (Right 1 Column) */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 15 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.15, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                             className="space-y-6"
                         >
                             <div className="bg-white border border-[#C5A576]/15 rounded-xl p-5 shadow-[0_15px_50px_rgba(0,0,0,0.015)] relative">
-                                
+
                                 {/* Precision corner border ticks */}
                                 <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t border-l border-[#C5A576]/45" />
                                 <div className="absolute top-0 right-0 w-2.5 h-2.5 border-t border-r border-[#C5A576]/45" />
@@ -343,9 +340,8 @@ export default function CreatePostPage() {
                                             <span className="text-[8px] font-mono text-[#888A93]">ASSET // 01</span>
                                         </div>
 
-                                        <div className={`relative group border border-dashed rounded-lg p-5 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-[#FAF9F6]/50 min-h-[160px] ${
-                                            errors.image ? 'border-red-400 bg-red-50/10' : 'border-[#C5A576]/30'
-                                        }`}>
+                                        <div className={`relative group border border-dashed rounded-lg p-5 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-[#FAF9F6]/50 min-h-[160px] ${errors.image ? 'border-red-400 bg-red-50/10' : 'border-[#C5A576]/30'
+                                            }`}>
                                             {imagePreview ? (
                                                 <div className="w-full relative">
                                                     <img
@@ -411,8 +407,8 @@ export default function CreatePostPage() {
                                             </label>
                                         </div>
                                         <div className="relative">
-                                            <select 
-                                                name="category" 
+                                            <select
+                                                name="category"
                                                 className="w-full px-4 py-3 bg-[#FAF9F6] border border-[#C5A576]/15 rounded-lg focus:ring-2 focus:ring-[#C5A576]/10 focus:border-[#C5A576] outline-none transition-all duration-300 text-gray-900 text-sm appearance-none cursor-pointer font-medium shadow-inner"
                                             >
                                                 <option value="Uncategorized">Select a category</option>
