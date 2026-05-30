@@ -127,7 +127,10 @@ async function main() {
     console.log('Start seeding ...');
     for (const post of blogPosts) {
         const p = await prisma.post.create({
-            data: post,
+            data: {
+                ...post,
+                published: true,
+            },
         });
         console.log(`Created post with id: ${p.id}`);
     }

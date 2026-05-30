@@ -11,9 +11,16 @@ interface BlogCardProps {
 
 export default function BlogCard({ post }: BlogCardProps) {
     return (
-        <article className="group flex flex-col h-full bg-transparent">
+        <article className="group flex flex-col h-full bg-white/60 hover:bg-white/95 border border-[#E3D9CE]/60 rounded-2xl p-5 md:p-6 transition-all duration-500 shadow-[0_8px_30px_rgba(28,83,100,0.02)] hover:shadow-[0_20px_45px_rgba(28,83,100,0.08)] hover:-translate-y-1">
             {/* Featured Image */}
-            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-lg mb-6">
+            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl mb-6">
+                {/* Category Pill */}
+                {post.category && (
+                    <span className="absolute top-3.5 left-3.5 z-20 bg-white/95 backdrop-blur-sm text-[#1C5364] px-3 py-1 rounded-[6px] text-[9px] font-bold uppercase tracking-widest shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-[#E3D9CE]/40">
+                        {post.category}
+                    </span>
+                )}
+                
                 <Image
                     src={post.image}
                     alt={post.title}
@@ -26,17 +33,17 @@ export default function BlogCard({ post }: BlogCardProps) {
 
             {/* Content */}
             <div className="flex flex-col flex-1 px-1">
-                <h2 className="text-[1.85rem] md:text-[2rem] leading-[1.2] font-serif font-light text-[var(--color-text-primary)] mb-4 tracking-tight normal-case group-hover:text-[var(--color-primary)] transition-colors duration-300">
+                <h3 className="text-2xl md:text-[1.65rem] leading-[1.3] font-serif font-medium text-[#111111] mb-3 tracking-tight normal-case group-hover:text-[#FF5A1F] transition-colors duration-300">
                     <Link href={`/blog/${post.id}`}>
                         {post.title}
                     </Link>
-                </h2>
+                </h3>
 
-                <p className="text-[0.925rem] text-[var(--color-text-secondary)] leading-[1.7] mb-3 font-normal line-clamp-3">
+                <p className="text-sm md:text-[14.5px] text-[#4e5355] leading-relaxed mb-4 font-normal line-clamp-3">
                     {post.excerpt}
                 </p>
 
-                <div className="text-[0.725rem] text-[var(--color-text-muted)] mb-6 font-normal tracking-wide uppercase">
+                <div className="text-[10px] text-[#8C8275] mb-5 font-semibold tracking-wider uppercase">
                     <time dateTime={new Date(post.date).toISOString()}>
                         {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
                     </time>
@@ -45,18 +52,18 @@ export default function BlogCard({ post }: BlogCardProps) {
                 <div className="mt-auto flex items-center justify-between pt-2">
                     <Link
                         href={`/blog/${post.id}`}
-                        className="inline-flex items-center text-[10px] font-bold tracking-widest uppercase text-[var(--color-primary)] hover:text-[var(--color-primary-light)] transition-colors"
+                        className="inline-flex items-center text-[10px] font-bold tracking-widest uppercase text-[#1C5364] hover:text-[#FF5A1F] transition-colors duration-300"
                     >
                         Read More
                         <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
                     </Link>
 
-                    <div className="flex items-center gap-5 text-[var(--color-text-muted)]">
+                    <div className="flex items-center gap-5 text-[#8C8275]">
                         <LikeButton postId={post.id} initialLikes={post.likesCount || 0} />
-                        <button className="hover:text-[var(--color-primary)] transition-colors" aria-label="Comment">
+                        <button className="hover:text-[#FF5A1F] transition-colors" aria-label="Comment">
                             <MessageSquare className="w-5 h-5 stroke-[1.5]" />
                         </button>
-                        <button className="hover:text-[var(--color-primary)] transition-colors" aria-label="Share">
+                        <button className="hover:text-[#FF5A1F] transition-colors" aria-label="Share">
                             <Share2 className="w-5 h-5 stroke-[1.5]" />
                         </button>
                     </div>

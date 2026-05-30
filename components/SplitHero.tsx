@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import AnimatedBlob from "./Animatedblob";
 
 // ─── Roc Grotesk Extra Wide 800 via Bunny Fonts ───────────────────────────────
 // Add this to your <head> or import in your global CSS:
@@ -35,19 +36,25 @@ export default function SplitHero() {
         @import url('https://fonts.bunny.net/css?family=roc-grotesk-extra-wide:800');
       `}</style>
 
-      <div className="relative w-full overflow-hidden bg-[#F6F4F1] text-[#111111]">
-        {/* Subtle radial background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(255,255,255,0.9),transparent_55%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.8),transparent_45%),linear-gradient(180deg,#F6F4F1,rgba(246,244,241,0.92))]" />
+      <div className="relative w-full overflow-hidden bg-[#F6F2EC] bg-[url('/bg2.jpg')] bg-cover bg-center text-[#111111]">
+        {/* <AnimatedBlob /> */}
+        {/* Background image with soft wash for legibility */}
+        <div className="absolute inset-0 -z-20 bg-[#F7F3ED]/80 backdrop-blur-[1.5px]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_8%,rgba(255,255,255,0.85),transparent_60%),radial-gradient(circle_at_75%_0%,rgba(255,255,255,0.7),transparent_55%),radial-gradient(circle_at_10%_85%,rgba(245,238,228,0.45),transparent_60%),linear-gradient(180deg,rgba(246,243,238,0.94),rgba(246,243,238,0.9))]" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-12 pt-28 md:px-12 lg:pt-28 lg:pb-24">
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-8 pb-14 pt-32 md:px-12 lg:pb-28 lg:pt-44">
 
           {/* ── Pill badge ── */}
-          <div className="inline-flex items-center gap-2 border border-[#E3DED7] bg-white/50 px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">
-            Faith • Purpose • Discipleship
+          <div className="mx-auto flex w-full max-w-3xl items-center justify-between text-[10px] uppercase tracking-[0.4em] text-[#5B5B5B]">
+            <span>Faith</span>
+            <div className="h-px flex-1 mx-4 bg-[#E3D9CE]/50" />
+            <span>Purpose</span>
+            <div className="h-px flex-1 mx-4 bg-[#E3D9CE]/50" />
+            <span>Discipleship</span>
           </div>
 
           {/* ── Main layout: headline absolutely positioned over content row ── */}
-          <div className="relative mt-4 flex min-h-[380px] flex-col lg:flex-row lg:items-stretch">
+          <div className="relative mt-8 grid min-h-[380px] grid-cols-1 gap-12 lg:grid-cols-12 lg:items-stretch lg:gap-10">
 
             {/* ── ABSOLUTELY POSITIONED HEADLINE ──────────────────────────────
                 position: absolute  → taken out of flow, spans from left edge
@@ -59,18 +66,33 @@ export default function SplitHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute left-0 -top-4 z-40 w-max max-w-none overflow-visible whitespace-nowrap "
+              className="absolute left-0 -top-4 z-40 w-max max-w-none overflow-visible whitespace-nowrap text-left"
               style={{
                 fontFamily: '"roc-grotesk-extra-wide", "Arial Black", sans-serif',
                 fontWeight: 800,
-                fontSize: "clamp(5rem, 10vw, 8.5rem)",
-                lineHeight: 0.82,
-                letterSpacing: "-0.07em",
+                fontSize: "clamp(4.75rem, 9.5vw, 8rem)",
+                lineHeight: 0.78,
+                letterSpacing: "-0.08em",
               }}
             >
-              <div style={{ transform: 'scale(1.35, 0.8)', transformOrigin: 'top left' }}>
-                <span className="block w-max max-w-none text-[#111111]">Pursuing</span>
-                <span className="block w-max max-w-none text-[#FF5A1F]">Christ</span>
+              <div style={{ transform: 'scale(1.25, 0.82)', transformOrigin: 'top left' }}>
+                <span
+                  className="block w-max max-w-none text-[#111111]"
+                  style={{ fontSize: "0.78em", letterSpacing: "-0.05em" }}
+                >
+                  Pursuing
+                </span>
+                <span
+                  className="relative block w-max max-w-none text-[#FF5A1F] drop-shadow-[0_4px_6px_rgba(0,0,0,0.15)]"
+                  style={{ fontSize: "1.06em", letterSpacing: "-0.1em" }}
+                >
+                  <span className="relative z-20">Chris</span>
+                  <img
+                    src="/t2.png"
+                    alt="t"
+                    className="relative z-10 inline-block h-[1.12em] -ml-[0.45em] -top-[0.12em]"
+                  />
+                </span>
               </div>
             </motion.h1>
 
@@ -83,58 +105,38 @@ export default function SplitHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-20 flex w-full flex-col items-start justify-start pb-0 pt-[130px] lg:w-[45%] lg:pr-8 lg:pt-[180px]"
+              className="relative z-20 flex w-full flex-col items-start justify-start pb-2 pt-[140px] lg:col-span-6 lg:pt-[190px]"
             >
-              {/* Tagline */}
-              <div className="flex gap-3 sm:gap-4">
-                <div className="w-[2px] sm:w-[3px] flex-shrink-0 self-stretch bg-[#FF5A1F]" />
-                <p className="max-w-[320px] sm:max-w-[400px] text-[14px] sm:text-[16px] leading-[1.6] text-[#6B6B6B]">
-                  Transforming the Total Man with the Total Word of God.
-                </p>
-              </div>
+              <div className="flex w-full flex-col items-start gap-8 sm:gap-9">
+                {/* Tagline */}
+                <div className="flex gap-3 sm:gap-4">
+                  <div className="w-[2px] sm:w-[3px] flex-shrink-0 self-stretch bg-[#027094]/80" />
+                  <p className="max-w-[320px] sm:max-w-[440px] text-[16px] sm:text-[19px] leading-[1.85] text-[#4e5355] font-serif italic font-" style={{ fontFamily: "var(--font-cormorant)" }}>
+                    Transforming the Total Man with the Total Word of God.
+                  </p>
+                </div>
 
-              {/* CTAs */}
-              <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-6 sm:gap-8">
-                <motion.button
-                  ref={buttonRef}
-                  onMouseMove={handleMouseMove}
-                  onMouseLeave={handleMouseLeave}
-                  animate={{ x: btnCoords.x, y: btnCoords.y }}
-                  transition={{ type: "spring", stiffness: 140, damping: 16, mass: 0.12 }}
-                  className="rounded-full bg-[#111111] px-8 py-3.5 text-[12px] font-bold uppercase tracking-[0.2em] text-white shadow-[0_10px_25px_rgba(0,0,0,0.12)] transition-colors hover:bg-[#FF5A1F]"
-                >
-                  Start the Journey
-                </motion.button>
+                {/* CTAs */}
+                <div className="flex flex-wrap items-center gap-4 sm:gap-10">
+                  <button
+                    className="rounded-[10px] bg-[#1C5364] px-9 py-2.5 text-[13px] font-bold uppercase tracking-[0.1em] text-white shadow-[0_16px_28px_rgba(12,34,40,0.22),0_4px_0_#0F3845] transition-all hover:-translate-y-[1px] hover:shadow-[0_18px_32px_rgba(12,34,40,0.26),0_5px_0_#0F3845] active:translate-y-[1px] active:shadow-[0_12px_24px_rgba(12,34,40,0.2),0_3px_0_#0F3845]"
+                  >
+                    Start The Journey
+                  </button>
 
-                <Link
-                  href="#"
-                  className="group inline-flex items-center gap-3 text-[12px] font-bold uppercase tracking-[0.2em] text-[#111111] transition-colors hover:text-[#FF5A1F]"
-                >
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E3DED7] bg-white transition-all group-hover:border-[#FF5A1F] group-hover:shadow-sm">
-                    <span className="ml-[3px] h-0 w-0 border-b-[5px] border-b-transparent border-l-[7px] border-l-[#111111] border-t-[5px] border-t-transparent transition-colors group-hover:border-l-[#FF5A1F]" />
-                  </span>
-                  Watch Message
-                </Link>
-              </div>
+                  <Link
+                    href="#"
+                    className="group inline-flex items-center gap-3 rounded-[10px] border border-[#C8BFB3] bg-white/60 px-7 py-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#3E4F53] shadow-[0_10px_20px_rgba(17,17,17,0.08)] transition-all hover:border-[#AFA59A] hover:bg-white/80 hover:text-[#2B3B3F]"
+                  >
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#FF5A1F] text-white transition-transform group-hover:scale-102">
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-2.5 w-3.5">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </span>
+                    Watch Message
+                  </Link>
+                </div>
 
-              {/* Stats */}
-              <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-6 sm:gap-8 text-[12px] font-medium tracking-wide text-[#6B6B6B]">
-                <span className="inline-flex items-center gap-2">
-                  <span className="flex h-4 w-4 shrink-0 items-center justify-center text-[#FF5A1F]">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                    </svg>
-                  </span>
-                  10k+ Lives Transformed
-                </span>
-                <span className="inline-flex items-center gap-2">
-                  <span className="flex h-4 w-4 shrink-0 items-center justify-center text-[#FF5A1F]">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                    </svg>
-                  </span>
-                  Global Community
-                </span>
               </div>
             </motion.div>
 
@@ -146,15 +148,17 @@ export default function SplitHero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-10 flex w-full justify-end lg:w-[55%]"
+              className="relative z-10 flex w-full justify-end lg:col-span-6 lg:translate-x-10"
             >
-              <div className="relative w-full max-w-[640px] rounded-[2px]   p-[14px] ">
-                <div className="relative aspect-[4/3] w-full overflow-hidden   ">
+              <div className="relative w-full max-w-[600px] -translate-x-10 -translate-y-8 rounded-[2px] p-[14px]">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2px]">
+                  <div className="pointer-events-none absolute inset-0 z-10 rounded-[2px] bg-[radial-gradient(circle_at_15%_0%,rgba(246,244,241,0.7),rgba(246,244,241,0.35),transparent_55%)]" />
+                  <div className="pointer-events-none absolute inset-0 z-20 rounded-[2px] " />
                   <Image
-                    src="/hero.png"
+                    src="/hero2.png"
                     alt="Pursuing Christ artwork"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[50%_20%]"
                     sizes="(max-width: 1024px) 90vw, 55vw"
                     priority
                   />

@@ -99,12 +99,12 @@ export default function LikeButton({ postId, initialLikes, className }: LikeButt
         >
             <ThumbsUp
                 className={`w-5 h-5 stroke-[1.5] transition-all duration-300 ${isLiked
-                    ? "fill-[var(--color-mba-gold)] text-[var(--color-mba-gold)]"
-                    : "text-gray-400 group-hover:text-[var(--color-mba-gold)]"
+                    ? "fill-[#FF5A1F] text-[#FF5A1F]"
+                    : "text-[#8C8275] group-hover:text-[#FF5A1F]"
                     }`}
             />
             {likes > 0 && (
-                <span className={`mt-1 text-[10px] font-medium transition-colors ${isLiked ? "text-[var(--color-mba-gold)]" : "text-gray-400 group-hover:text-[var(--color-mba-gold)]"
+                <span className={`mt-1 text-[10px] font-medium transition-colors ${isLiked ? "text-[#FF5A1F]" : "text-[#8C8275] group-hover:text-[#FF5A1F]"
                     }`}>
                     {likes}
                 </span>

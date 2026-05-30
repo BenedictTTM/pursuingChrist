@@ -19,7 +19,7 @@ export default function Footer() {
                         <div className="flex items-center gap-3">
                             <Link href="/" className="hover:opacity-80 transition-opacity duration-300">
                                 <Image 
-                                    src="/logo-transparent.png" 
+                                    src="/logo.png" 
                                     alt="Logo" 
                                     width={120} 
                                     height={60} 

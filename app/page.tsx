@@ -1,5 +1,5 @@
 import SplitHero from "@/components/SplitHero";
-
+import AnimatedBlob from "@/components/Animatedblob";
 import Footer from "@/components/Footer";
 import Blog from "@/components/Blog";
 import WhoAmI from "@/components/WhoAmI";
@@ -31,11 +31,8 @@ export default async function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen flex-col">
+      <main className="flex min-h-screen flex-col relative">
         <SplitHero />
-        <section id="about">
-          <WhoAmI />
-        </section>
         <Blog posts={blogPosts} />
         <Contact />
       </main>
