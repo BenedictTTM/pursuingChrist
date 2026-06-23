@@ -56,7 +56,7 @@ export default async function BlogPage() {
 
             {/* Archive Branding Header */}
             <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-12 xl:px-20 pt-28 md:pt-20 flex justify-between items-center text-[10px] text-[#8C8275] tracking-[0.25em] uppercase select-none pointer-events-none font-sans font-semibold">
-                <span>Jeffrey Drai Archive</span>
+                <span>Jehiel Annobil Archive</span>
                 <span>Faith & Purpose</span>
             </div>
 
@@ -150,7 +150,7 @@ export default async function BlogPage() {
 
                         {/* Remaining Posts Grid */}
                         {blogPosts.length > 4 ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5">
                                 {blogPosts.slice(4).map((post) => (
                                     <div
                                         key={post.id}

@@ -11,12 +11,12 @@ interface BlogCardProps {
 
 export default function BlogCard({ post }: BlogCardProps) {
     return (
-        <article className="group flex flex-col h-full bg-white/60 hover:bg-white/95 border border-[#E3D9CE]/60 rounded-2xl p-5 md:p-6 transition-all duration-500 shadow-[0_8px_30px_rgba(28,83,100,0.02)] hover:shadow-[0_20px_45px_rgba(28,83,100,0.08)] hover:-translate-y-1">
+        <article className="group flex flex-col h-full transition-all duration-500">
             {/* Featured Image */}
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl mb-6">
                 {/* Category Pill */}
                 {post.category && (
-                    <span className="absolute top-3.5 left-3.5 z-20 bg-white/95 backdrop-blur-sm text-[#1C5364] px-3 py-1 rounded-[6px] text-[9px] font-bold uppercase tracking-widest shadow-[0_4px_12px_rgba(0,0,0,0.04)] border border-[#E3D9CE]/40">
+                    <span className="absolute top-3.5 left-3.5 z-20  text-[#1C5364] rounded-[6px] text-[9px] font-bold uppercase tracking-widest ">
                         {post.category}
                     </span>
                 )}
@@ -49,7 +49,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                     </time>
                 </div>
 
-                <div className="mt-auto flex items-center justify-between pt-2">
+                <div className="mt-auto flex items-center justify-between p-4">
                     <Link
                         href={`/blog/${post.id}`}
                         className="inline-flex items-center text-[10px] font-bold tracking-widest uppercase text-[#1C5364] hover:text-[#FF5A1F] transition-colors duration-300"
@@ -58,7 +58,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                         <ArrowRight className="ml-1.5 w-3.5 h-3.5" />
                     </Link>
 
-                    <div className="flex items-center gap-5 text-[#8C8275]">
+                    <div className="flex items-center gap-5 text-[#8C8275] ">
                         <LikeButton postId={post.id} initialLikes={post.likesCount || 0} />
                         <button className="hover:text-[#FF5A1F] transition-colors" aria-label="Comment">
                             <MessageSquare className="w-5 h-5 stroke-[1.5]" />

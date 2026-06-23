@@ -88,7 +88,7 @@ function AuthForm() {
         {/* Header Branding */}
         <div className="relative z-10 flex items-center gap-3">
           <div className="w-8 h-[1px] bg-[#C5A576]" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A576]">Jeffrey Drai</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A576]">Jehiel Annobil</span>
         </div>
 
         {/* Center Copy */}

@@ -75,7 +75,7 @@ const postsToUpload = [
     },
     {
         title: "The Rise of African Deep-Tech Talent: What Jeffrey Mawusi Drai’s Career Says About the Future",
-        excerpt: "Jeffrey Drai’s journey as a case study for the growth of African talent in biotechnology, AI-driven healthcare, and global STEM collaboration.",
+        excerpt: "Jehiel Annobil’s journey as a case study for the growth of African talent in biotechnology, AI-driven healthcare, and global STEM collaboration.",
         category: "AI & Health",
         readTime: "6 min",
         image: "/dry.png",
@@ -114,24 +114,24 @@ const postsToUpload = [
 
 async function main() {
     console.log('Starting upload of the requested blog posts...');
-    
+
     for (const post of postsToUpload) {
         // Check if post with the same title already exists to avoid duplicates
         const existing = await prisma.post.findFirst({
             where: { title: post.title }
         });
-        
+
         if (existing) {
             console.log(`Skipping: Post titled "${post.title}" already exists.`);
             continue;
         }
-        
+
         const created = await prisma.post.create({
             data: post
         });
         console.log(`Successfully uploaded: "${created.title}" with ID: ${created.id}`);
     }
-    
+
     console.log('Finished uploading posts.');
 }
 

@@ -79,7 +79,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
             <div className="max-w-[1200px] mx-auto px-4 md:px-6 pt-24 md:pt-28 flex justify-between items-center text-[10px] text-[#8C8275] tracking-[0.25em] uppercase select-none pointer-events-none font-sans font-bold">
                 <span className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F] animate-pulse" />
-                    Jeffrey Drai Publications
+                    Jehiel Annobil Publications
                 </span>
                 <span>Faith & Purpose</span>
             </div>
@@ -181,7 +181,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
 
                                 <div className="space-y-1">
                                     <h4 className="text-[10px] font-sans tracking-widest uppercase text-[#8C8275] font-bold">Author</h4>
-                                    <p className="text-xs font-poppins font-bold text-[#111111]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Jeffrey Drai</p>
+                                    <p className="text-xs font-poppins font-bold text-[#111111]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Jehiel Annobil</p>
                                     <p className="text-[10px] text-[#8C8275] leading-normal font-semibold">Faith & Discipleship</p>
                                 </div>
 

@@ -127,7 +127,7 @@ export default function AdminPage() {
                     <div>
                         <div className="flex items-center gap-3 mb-2.5">
                             <div className="w-5 h-[1px] bg-[#C5A576]" />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A576]">Jeffrey Drai Ledger</span>
+                            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A576]">Jehiel Annobil Ledger</span>
                         </div>
                         <h1
                             className="font-display font-extrabold uppercase leading-none tracking-tight select-none text-4xl sm:text-5xl lg:text-6xl text-[#111116]"
@@ -252,8 +252,8 @@ export default function AdminPage() {
                                     </td>
                                     <td className="p-6">
                                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider ${post.published
-                                                ? 'bg-[#E6F4EA] text-[#137333] border border-[#C1E7C4]'
-                                                : 'bg-[#F1F3F4] text-[#3C4043] border border-[#DADCE0]'
+                                            ? 'bg-[#E6F4EA] text-[#137333] border border-[#C1E7C4]'
+                                            : 'bg-[#F1F3F4] text-[#3C4043] border border-[#DADCE0]'
                                             }`}>
                                             {post.published ? 'Published' : 'Draft'}
                                         </span>
@@ -324,8 +324,8 @@ export default function AdminPage() {
                                 <div className="flex-1 min-w-0">
                                     <div className="flex items-center gap-2.5 mb-1.5 flex-wrap">
                                         <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider ${post.published
-                                                ? 'bg-[#E6F4EA] text-[#137333] border border-[#C1E7C4]'
-                                                : 'bg-[#F1F3F4] text-[#3C4043] border border-[#DADCE0]'
+                                            ? 'bg-[#E6F4EA] text-[#137333] border border-[#C1E7C4]'
+                                            : 'bg-[#F1F3F4] text-[#3C4043] border border-[#DADCE0]'
                                             }`}>
                                             {post.published ? 'Published' : 'Draft'}
                                         </span>

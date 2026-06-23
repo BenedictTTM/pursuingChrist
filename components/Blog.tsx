@@ -64,7 +64,7 @@ export default function Blog({ posts }: BlogProps) {
 
                         {/* Editorial Subtitle (Excerpt) */}
                         {latestPost.excerpt && (
-                            <p 
+                            <p
                                 className="font-serif italic text-lg sm:text-xl md:text-2xl text-[#6E6559] leading-relaxed max-w-3xl mx-auto mb-8 px-4"
                                 style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
                             >
@@ -74,7 +74,7 @@ export default function Blog({ posts }: BlogProps) {
 
                         {/* Refined Meta Details */}
                         <div className="flex items-center justify-center gap-3 text-[10px] md:text-xs text-[#8E8577] uppercase tracking-[0.2em] font-semibold">
-                            <span>Jeffrey Drai</span>
+                            <span> Jehiel Annobil</span>
                             <span className="w-1.5 h-1.5 rounded-full bg-[#E3D9CE]" />
                             <span className="flex items-center gap-1">
                                 <Calendar className="w-3.5 h-3.5 text-[#FF5A1F] stroke-[2]" />
@@ -119,7 +119,7 @@ export default function Blog({ posts }: BlogProps) {
 
                                 <div className="space-y-1">
                                     <h4 className="text-[10px] font-sans tracking-widest uppercase text-[#6E6559] font-bold">Author</h4>
-                                    <p className="text-sm font-serif font-bold text-[#111111]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Jeffrey Drai</p>
+                                    <p className="text-sm font-serif font-bold text-[#111111]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Jehiel Annobil</p>
                                     <p className="text-[10px] text-[#6E6559] leading-normal font-semibold">Faith & Discipleship</p>
                                 </div>
 
@@ -176,7 +176,7 @@ export default function Blog({ posts }: BlogProps) {
                                             JD
                                         </div>
                                         <div>
-                                            <p className="text-xs font-bold text-[#111111]">Jeffrey Drai</p>
+                                            <p className="text-xs font-bold text-[#111111]">Jehiel Annobil</p>
                                             <p className="text-[10px] text-[#6E6559] font-semibold uppercase tracking-wider text-left">Faith & Discipleship</p>
                                         </div>
                                     </div>
@@ -315,7 +315,7 @@ export default function Blog({ posts }: BlogProps) {
                             <div className="w-8 h-[1.5px] bg-[#1C5364]" />
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 mb-5">
                             {gridPosts.map((post, index) => (
                                 <motion.div
                                     key={post.id}

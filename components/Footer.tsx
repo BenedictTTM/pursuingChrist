@@ -106,7 +106,7 @@ export default function Footer() {
                     <div className="absolute top-[-1px] left-1/2 -translate-x-1/2 w-8 h-[1px] bg-[var(--color-primary)]/40 hidden sm:block" />
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-[10px] text-[var(--color-text-muted)] tracking-[0.15em] font-mono uppercase">
-                        <span>© {currentYear} Jeffrey Drai. All rights reserved.</span>
+                        <span>© {currentYear} Jehiel Annobil. All rights reserved.</span>
                         <span className="hidden sm:inline text-[var(--color-border)]">|</span>
                         <span>SYS_COORD_04 // FOOTER</span>
                     </div>
