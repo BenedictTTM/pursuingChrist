@@ -8,6 +8,7 @@ export default function Contact() {
     const [copied, setCopied] = useState(false);
     const email = "jeffrey.drai@yorku.ca";
 
+    
     const handleCopy = () => {
         navigator.clipboard.writeText(email);
         setCopied(true);
