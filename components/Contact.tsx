@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Mail, Copy, Check } from "lucide-react";
 
+
 export default function Contact() {
     const [copied, setCopied] = useState(false);
     const email = "jeffrey.drai@yorku.ca";
 
-    
+
     const handleCopy = () => {
         navigator.clipboard.writeText(email);
         setCopied(true);
