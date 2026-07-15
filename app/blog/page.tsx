@@ -56,7 +56,7 @@ export default async function BlogPage() {
 
             {/* Archive Branding Header */}
             <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-12 xl:px-20 pt-28 md:pt-20 flex justify-between items-center text-[10px] text-[#8C8275] tracking-[0.25em] uppercase select-none pointer-events-none font-sans font-semibold">
-                <span>Jehiel Annobil Archive</span>
+                <span>Pursuing Christ Archive</span>
                 <span>Faith & Purpose</span>
             </div>
 

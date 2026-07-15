@@ -7,7 +7,7 @@ async function main() {
   if (!existingAdmin) {
     await prisma.admin.create({
       data: {
-        password: 'draiaquinas2023',
+        password: 'admin2023',
       },
     });
     console.log('Admin password seeded successfully.');

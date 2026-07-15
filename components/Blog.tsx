@@ -74,7 +74,7 @@ export default function Blog({ posts }: BlogProps) {
 
                         {/* Refined Meta Details */}
                         <div className="flex items-center justify-center gap-3 text-[10px] md:text-xs text-[#8E8577] uppercase tracking-[0.2em] font-semibold">
-                            <span> Jehiel Annobil</span>
+                            <span> Pursuing Christ</span>
                             <span className="w-1.5 h-1.5 rounded-full bg-[#E3D9CE]" />
                             <span className="flex items-center gap-1">
                                 <Calendar className="w-3.5 h-3.5 text-[#FF5A1F] stroke-[2]" />
@@ -119,7 +119,7 @@ export default function Blog({ posts }: BlogProps) {
 
                                 <div className="space-y-1">
                                     <h4 className="text-[10px] font-sans tracking-widest uppercase text-[#6E6559] font-bold">Author</h4>
-                                    <p className="text-sm font-serif font-bold text-[#111111]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Jehiel Annobil</p>
+                                    <p className="text-sm font-serif font-bold text-[#111111]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Pursuing Christ</p>
                                     <p className="text-[10px] text-[#6E6559] leading-normal font-semibold">Faith & Discipleship</p>
                                 </div>
 
@@ -176,7 +176,7 @@ export default function Blog({ posts }: BlogProps) {
                                             JD
                                         </div>
                                         <div>
-                                            <p className="text-xs font-bold text-[#111111]">Jehiel Annobil</p>
+                                            <p className="text-xs font-bold text-[#111111]">Pursuing Christ</p>
                                             <p className="text-[10px] text-[#6E6559] font-semibold uppercase tracking-wider text-left">Faith & Discipleship</p>
                                         </div>
                                     </div>
@@ -282,7 +282,7 @@ export default function Blog({ posts }: BlogProps) {
                                                 Join the Discussion & Reflections
                                             </h4>
                                             <p className="text-xs md:text-sm text-[#6E6559] leading-relaxed max-w-md font-sans">
-                                                Engage with other readers on this article, or subscribe to receive Jeffrey's latest weekly faith and discipleship entries directly in your inbox.
+                                                Engage with other readers on this article, or subscribe to receive Pursuing Christ's latest weekly faith and discipleship entries directly in your inbox.
                                             </p>
                                         </div>
                                         <div className="flex flex-col sm:flex-row items-stretch gap-2.5 w-full md:w-auto min-w-[200px]">

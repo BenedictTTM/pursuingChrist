@@ -88,7 +88,7 @@ function AuthForm() {
         {/* Header Branding */}
         <div className="relative z-10 flex items-center gap-3">
           <div className="w-8 h-[1px] bg-[#C5A576]" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A576]">Jehiel Annobil</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A576]">Pursuing Christ</span>
         </div>
 
         {/* Center Copy */}
@@ -143,7 +143,7 @@ function AuthForm() {
                 id="email"
                 className={`w-full px-4 py-3.5 bg-white border rounded-lg focus:ring-2 focus:ring-[#C5A576]/10 focus:border-[#C5A576] outline-none transition-all duration-300 text-gray-900 placeholder-[#888A93]/50 text-sm shadow-xs ${errors.email ? 'border-red-400' : 'border-[#C5A576]/15'
                   }`}
-                placeholder="admin@jeffreydrai.com"
+                placeholder="admin@pursuingchrist.space"
               />
               {errors.email && <p className="text-red-500 text-[10px] font-medium font-mono uppercase tracking-wider mt-1">{errors.email}</p>}
             </div>

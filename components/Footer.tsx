@@ -71,10 +71,10 @@ export default function Footer() {
                         <div className="space-y-3">
                             <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-text-muted)] font-semibold font-sans">For inquiries:</p>
                             <a
-                                href="mailto:jeffrey.drai@yorku.ca"
+                                href="mailto:contact@pursuingchrist.space"
                                 className="text-[16px] text-[var(--color-text-primary)] hover:text-[var(--color-primary)] font-medium transition-colors duration-300 inline-block pb-1 border-b border-[var(--color-border)] hover:border-[var(--color-primary)]"
                             >
-                                jeffrey.drai@yorku.ca
+                                contact@pursuingchrist.space
                             </a>
                         </div>
                         <div className="flex gap-3.5 pt-4">
@@ -82,7 +82,7 @@ export default function Footer() {
                                 { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
                                 { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
                                 { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                                { Icon: Mail, href: "mailto:jeffrey.drai@yorku.ca", label: "Email" }
+                                { Icon: Mail, href: "mailto:contact@pursuingchrist.space", label: "Email" }
                             ].map((social, index) => (
                                 <a
                                     key={index}
@@ -106,7 +106,7 @@ export default function Footer() {
                     <div className="absolute top-[-1px] left-1/2 -translate-x-1/2 w-8 h-[1px] bg-[var(--color-primary)]/40 hidden sm:block" />
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-[10px] text-[var(--color-text-muted)] tracking-[0.15em] font-mono uppercase">
-                        <span>© {currentYear} Jehiel Annobil. All rights reserved.</span>
+                        <span>© {currentYear} Pursuing Christ. All rights reserved.</span>
                         <span className="hidden sm:inline text-[var(--color-border)]">|</span>
                         <span>SYS_COORD_04 // FOOTER</span>
                     </div>

@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   },
   description: "An online Christian ministry dedicated to faith, purpose, and discipleship. Transforming the Total Man with the Total Word of God.",
   keywords: ["Christian ministry", "Bible study", "Discipleship", "Faith", "Jesus Christ", "Online Church"],
-  authors: [{ name: "Jehiel Annobil" }],
+  authors: [{ name: "Pursuing Christ" }],
   openGraph: {
     title: "Pursuing Christ Ministry",
     description: "Transforming the Total Man with the Total Word of God.",

@@ -10,7 +10,7 @@ export default function SchemaMarkup() {
     "description": "An online Christian ministry dedicated to faith, purpose, and discipleship.",
     "founder": {
       "@type": "Person",
-      "name": "Jehiel Annobil"
+      "name": "Pursuing Christ"
     }
   }
 
