@@ -69,7 +69,7 @@ export default function WhoAmI() {
             <div className="absolute inset-4 rounded-xl overflow-hidden border border-white/10 bg-neutral-950 transition-all duration-700 group-hover:border-white/20">
               <Image
                 src="/mba-headshot.jpg"
-                alt="Jeffrey Mawusi Drai Editorial Portrait"
+                alt="Jeffrey Pursing Christ Editorial Portrait"
                 fill
                 priority
                 className="w-full h-full object-cover grayscale contrast-[1.05] saturate-[0.8] hover:grayscale-0 hover:scale-105 hover:saturate-[0.95] hover:contrast-[1.1] transition-all duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)]"

@@ -6,6 +6,7 @@ import TopBar from "@/components/TopBar";
 import Providers from "./providers";
 import AmbientBackground from "@/components/AmbientBackground";
 import { Toaster } from "@/components/ui/sonner";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -68,13 +69,37 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Mawusi Drai | Engineer, Public Speaker & Researcher",
-  description: "Official portfolio of Mawusi Drai - Engineer, Public Speaker, and Researcher.",
-  keywords: "Mawusi Drai, Engineer, Public Speaker, Researcher, Ghana",
-  authors: [{ name: "Mawusi Drai" }],
+  metadataBase: new URL('https://www.pursuingchrist.space'),
+  title: {
+    default: "Pursuing Christ | Transforming the Total Man",
+    template: "%s | Pursuing Christ"
+  },
+  description: "An online Christian ministry dedicated to faith, purpose, and discipleship. Transforming the Total Man with the Total Word of God.",
+  keywords: ["Christian ministry", "Bible study", "Discipleship", "Faith", "Jesus Christ", "Online Church"],
+  authors: [{ name: "Jehiel Annobil" }],
   openGraph: {
-    title: "Mawusi Drai ",
+    title: "Pursuing Christ Ministry",
+    description: "Transforming the Total Man with the Total Word of God.",
+    url: "https://www.pursuingchrist.space",
+    siteName: "Pursuing Christ",
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pursuing Christ Ministry",
+    description: "Transforming the Total Man with the Total Word of God.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -88,6 +113,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} ${playfair.variable} ${montserrat.variable} ${oswald.variable} ${raleway.variable} ${imFellEnglish.variable} ${brotheric.variable} ${cormorant.variable} font-sans antialiased text-[var(--color-mba-text-primary)] overflow-x-hidden`}
       >
+        <SchemaMarkup />
         <AmbientBackground />
         <div className="relative z-10 flex flex-col min-h-screen">
           <TopBar />

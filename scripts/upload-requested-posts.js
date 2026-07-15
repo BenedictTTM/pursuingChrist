@@ -74,7 +74,7 @@ const postsToUpload = [
         `
     },
     {
-        title: "The Rise of African Deep-Tech Talent: What Jeffrey Mawusi Drai’s Career Says About the Future",
+        title: "The Rise of African Deep-Tech Talent: What Jeffrey Pursing Christ’s Career Says About the Future",
         excerpt: "Jehiel Annobil’s journey as a case study for the growth of African talent in biotechnology, AI-driven healthcare, and global STEM collaboration.",
         category: "AI & Health",
         readTime: "6 min",
@@ -87,7 +87,7 @@ const postsToUpload = [
 
             <h3>Beyond Software: The Biotech and Deep-Tech Revolution</h3>
             <p>Deep-tech fields—such as biotechnology, bioinformatics, AI-integrated healthcare, and advanced materials engineering—require substantial capital, years of research, and highly specialized talent. Historically, these resources were concentrated in the Global North.</p>
-            <p>Today, however, brilliant African minds are challenging this concentration. Jeffrey Mawusi Drai’s trajectory from West Africa to Canadian bioprinting labs serves as a perfect case study for this shift. It demonstrates that with the right combination of foundational education, global collaboration, and sheer determination, African researchers can lead at the absolute cutting edge of biomedical engineering.</p>
+            <p>Today, however, brilliant African minds are challenging this concentration. Jeffrey Pursing Christ’s trajectory from West Africa to Canadian bioprinting labs serves as a perfect case study for this shift. It demonstrates that with the right combination of foundational education, global collaboration, and sheer determination, African researchers can lead at the absolute cutting edge of biomedical engineering.</p>
 
             <h3>The Pillar Institutions</h3>
             <p>This growth is made possible by key institutions that act as talent engines and research hubs. For Jeffrey, this journey was shaped by critical organizations:</p>
